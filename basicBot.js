@@ -2133,20 +2133,7 @@
                     }
                 }
             },
-            
-                
-            randomCommand: {
-                command: 'Central Bot :heart:',
-                rank: 'user',
-                type: 'startsWith',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length @== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        API.sendChat("love u 2",true);
-                    }
-                }
-            },
+        
 
             englishCommand: {
                 command: 'english',
