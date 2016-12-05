@@ -309,9 +309,9 @@
             songstats: true,
             commandLiteral: "!",
             blacklists: {
-                NSFW: "https://rawgit.com/basicBot/custom/master/blacklists/NSFWlist.json",
-                OP: "https://rawgit.com/basicBot/custom/master/blacklists/OPlist.json",
-                BANNED: "https://rawgit.com/basicBot/custom/master/blacklists/BANNEDlist.json"
+                NSFW: "https://rawgit.com/xGapples/custom/master/blacklists/NSFWlist.json",
+                OP: "https://rawgit.com/xGapples/custom/master/blacklists/OPlist.json",
+                BANNED: "https://rawgit.com/xgapples/custom/master/blacklists/BANNEDlist.json"
             }
         },
         room: {
@@ -2130,6 +2130,20 @@
                     else {
                         var link = 'http://www.emoji-cheat-sheet.com/';
                         API.sendChat(subChat(basicBot.chat.emojilist, {link: link}));
+                    }
+                }
+            },
+            
+                
+            randomCommand: {
+                command: 'Central Bot :heart:',
+                rank: 'user',
+                type: 'startsWith',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length @== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        API.sendChat("love u 2",true);
                     }
                 }
             },
